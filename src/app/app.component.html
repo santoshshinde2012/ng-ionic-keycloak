@@ -4,11 +4,11 @@
       <ion-title>
         Ionic Keycloak
       </ion-title>
-      <ion-buttons slot="end" size="large">
-        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      <ion-buttons slot="end" size="large" *ngIf="loggedIn" (click)="logout()">
+        <ion-icon slot="start" name="log-out-outline"></ion-icon> Logout
       </ion-buttons>
-      <ion-buttons slot="end" size="large">
-        <ion-icon slot="icon-only" name="log-in-outline"></ion-icon>
+      <ion-buttons slot="end" size="large" *ngIf="!loggedIn" (click)="login()">
+        <ion-icon slot="start" name="log-in-outline"></ion-icon> Login
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
